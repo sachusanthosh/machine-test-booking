@@ -4,12 +4,12 @@ import axios from "axios";
 const BookingListing = ({ refresh }) => {
   const [bookings, setBookings] = useState([]);
 
-//   fetching the bookings from db
+  // fetching the bookings from db
   useEffect(() => {
     axios
-      .get("https://machine-test-booking-server.onrender.com")
+      .get("https://machine-test-booking-server.onrender.com/bookings")
       .then((res) => setBookings(res.data));
-  }, [refresh]); 
+  }, [refresh]);
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <h1 className="text-2xl font-bold mb-4">Bookings</h1>
