@@ -11,7 +11,7 @@ const BookingForm = ({ onBookingSuccess }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/bookings", {
+      const response = await axios.post("https://machine-test-booking-server.onrender.com", {
         name,
         email,
         service,
