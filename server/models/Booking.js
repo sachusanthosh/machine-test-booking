@@ -1,4 +1,5 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+
 const bookingSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -16,7 +17,7 @@ const bookingSchema = new mongoose.Schema({
         type: Date,
         required: true,
     }
-})
+});
 
 const Booking = mongoose.model("Booking", bookingSchema);
 
