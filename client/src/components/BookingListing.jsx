@@ -7,7 +7,7 @@ const BookingListing = ({ refresh }) => {
 //   fetching the bookings from db
   useEffect(() => {
     axios
-      .get("http://localhost:5000/bookings")
+      .get("https://machine-test-booking-server.onrender.com/bookings")
       .then((res) => setBookings(res.data));
   }, [refresh]); 
   return (
