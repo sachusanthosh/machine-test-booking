@@ -31,22 +31,28 @@ const BookingForm = ({ onBookingSuccess }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="space-y-4">
       <input
         value={name}
         onChange={(e) => setName(e.target.value)}
         type="text"
         placeholder="Enter your name"
         required
+        className="w-full p-2 border border-gray-300 rounded"
       />
       <input
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        type="text"
+        type="email"
         placeholder="Enter your email"
         required
+        className="w-full p-2 border border-gray-300 rounded"
       />
-      <select value={service} onChange={(e) => setService(e.target.value)}>
+      <select
+        value={service}
+        onChange={(e) => setService(e.target.value)}
+        className="w-full p-2 border border-gray-300 rounded"
+      >
         <option value="Car Wash">Car Wash</option>
         <option value="AC Repair">AC Repair</option>
       </select>
@@ -55,8 +61,11 @@ const BookingForm = ({ onBookingSuccess }) => {
         onChange={(e) => setDate(e.target.value)}
         type="date"
         required
+        className="w-full p-2 border border-gray-300 rounded"
       />
-      <button type="submit">Book</button>
+      <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">
+        Book
+      </button>
     </form>
   );
 };

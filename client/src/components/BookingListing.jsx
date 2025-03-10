@@ -11,12 +11,12 @@ const BookingListing = ({ refresh }) => {
       .then((res) => setBookings(res.data));
   }, [refresh]); 
   return (
-    <div>
-      <h1>Bookings</h1>
+    <div className="bg-white p-6 rounded-lg shadow-md">
+      <h1 className="text-2xl font-bold mb-4">Bookings</h1>
       {bookings.map((booking, index) => (
-        <ul key={index}>
-          <li>
-            {booking.name}, {booking.email}, {booking.service}, {booking.date}
+        <ul key={index} className="mb-2">
+          <li className="p-2 border-b border-gray-200">
+            <span className="font-semibold">{booking.name}</span>, {booking.email}, {booking.service}, {booking.date}
           </li>
         </ul>
       ))}
