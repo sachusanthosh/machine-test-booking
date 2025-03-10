@@ -7,11 +7,11 @@ const BookingForm = ({ onBookingSuccess }) => {
   const [service, setService] = useState("Car Wash");
   const [date, setDate] = useState("");
 
-//   posting bookings to db
+  // posting bookings to db
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://machine-test-booking-server.onrender.com", {
+      const response = await axios.post("https://machine-test-booking-server.onrender.com/bookings", {
         name,
         email,
         service,
